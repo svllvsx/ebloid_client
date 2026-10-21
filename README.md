@@ -1,0 +1,212 @@
+<p align="center"><b>PUBLIC PROJECT · ПУБЛИЧНЫЙ ПРОЕКТ</b><br>
+<a href="https://github.com/svllvsxprod/ebloid_client">Original repository / Оригинальный репозиторий ↗</a> · <a href="https://github.com/svllvsx">Portfolio / Портфолио</a></p>
+
+> **Cross-platform mobile media client.** Кроссплатформенный мобильный медиаклиент.
+> This is a README showcase. Source code, releases and development instructions belong to the original repository.
+> Это README-витрина. Исходники, релизы и команды разработки относятся к оригинальному репозиторию.
+
+---
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/svllvsxprod/ebloid_client/main/assets/branding/eblo-favicon.svg" alt="Логотип Eblo.id" width="150" />
+</p>
+
+<h1 align="center">Eblo.id</h1>
+
+<p align="center">
+  Flutter-клиент eblo.id для iOS и Android с одной кодовой базой и единым интерфейсом.
+</p>
+
+<p align="center">
+  <a href="https://eblo.id">Открыть eblo.id</a>
+</p>
+
+<table align="center">
+  <tr>
+    <td align="center" width="760">
+      <h3>Поддержите разработку мобильного клиента</h3>
+      <p>Поддержка помогает развивать мобильный клиент, тестировать платформенные сценарии и доводить проект до полноценного релиза.</p>
+      <table align="center">
+        <tr>
+          <td align="center" width="350"><a href="https://t.me/tribute/app?startapp=dK9j"><img src="https://raw.githubusercontent.com/svllvsxprod/ebloid_client/main/docs/readme/support-tribute.svg" width="340" alt="Поддержать разработку через Tribute" /></a></td>
+          <td align="center" width="350"><a href="https://nowpayments.io/donation/svllvsx"><img src="https://raw.githubusercontent.com/svllvsxprod/ebloid_client/main/docs/readme/support-nowpayments.svg" width="340" alt="Поддержать разработку через NOWPayments" /></a></td>
+        </tr>
+        <tr>
+          <td align="center" colspan="2"><a href="https://t.me/svllvsxprod"><img src="https://raw.githubusercontent.com/svllvsxprod/ebloid_client/main/docs/readme/telegram.svg" width="340" alt="Telegram-канал svllvsxprod" /></a></td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+
+<p align="center">
+  <img alt="Flutter 3.44.2" src="https://img.shields.io/badge/Flutter-3.44.2-02569B?style=for-the-badge&amp;logo=flutter&amp;logoColor=white">
+  <img alt="Dart 3.12.2" src="https://img.shields.io/badge/Dart-3.12.2-0175C2?style=for-the-badge&amp;logo=dart&amp;logoColor=white">
+  <img alt="Android" src="https://img.shields.io/badge/Android-ready-3DDC84?style=for-the-badge&amp;logo=android&amp;logoColor=white">
+  <img alt="iOS" src="https://img.shields.io/badge/iOS-ready-000000?style=for-the-badge&amp;logo=apple&amp;logoColor=white">
+</p>
+
+<p align="center">
+  <a href="#готово-и-работает">Готово</a> ·
+  <a href="#интерфейс">Интерфейс</a> ·
+  <a href="#архитектура">Архитектура</a> ·
+  <a href="#модель-безопасности">Безопасность</a> ·
+  <a href="#текущие-ограничения">Ограничения</a>
+</p>
+
+## О Проекте
+
+Eblo.id — нативный по поведению мобильный клиент для просмотра и публикации пользовательского медиаконтента на [eblo.id](https://eblo.id).
+
+Приложение использует одно Flutter-дерево интерфейса для iOS и Android. Платформенные различия изолированы в адаптерах авторизации, безопасного хранилища, выбора файлов, воспроизведения медиа, системной отправки ссылок и deep links.
+
+Проект находится в активной разработке. Текущий код уже поддерживает основной пользовательский маршрут, но пока не считается готовым к публикации в App Store и Google Play.
+
+Публичный репозиторий содержит демонстрационный снимок интерфейса и ограниченную часть исходного кода. Build manifests, platform projects, composition root, controllers и integration layer намеренно не публикуются, поэтому этот snapshot нельзя использовать для сборки приложения.
+
+## Beta-Сборка
+
+Текущая тестовая версия доступна в [GitHub Releases](https://github.com/svllvsxprod/ebloid_client/releases/tag/v1.0.0-beta.1).
+
+Это debug APK для тестирования Beta 1. Сборка не предназначена для публикации в Google Play или использования как production release.
+
+## Интерфейс
+
+<table>
+  <tr>
+    <th>Лента</th>
+    <th>Публикация</th>
+    <th>Создание</th>
+    <th>Профиль</th>
+  </tr>
+  <tr>
+    <td><img src="https://raw.githubusercontent.com/svllvsxprod/ebloid_client/main/docs/readme/screenshots/ios-feed.png" alt="Лента Eblo.id на iOS" width="210" /></td>
+    <td><img src="https://raw.githubusercontent.com/svllvsxprod/ebloid_client/main/docs/readme/screenshots/ios-publication.png" alt="Публикация Eblo.id на iOS" width="210" /></td>
+    <td><img src="https://raw.githubusercontent.com/svllvsxprod/ebloid_client/main/docs/readme/screenshots/ios-create.png" alt="Создание публикации Eblo.id на iOS" width="210" /></td>
+    <td><img src="https://raw.githubusercontent.com/svllvsxprod/ebloid_client/main/docs/readme/screenshots/ios-profile.png" alt="Профиль Eblo.id на iOS" width="210" /></td>
+  </tr>
+</table>
+
+<table>
+  <tr>
+    <th>Видео</th>
+    <th>Поиск</th>
+    <th>Уведомления</th>
+    <th>Настройки</th>
+  </tr>
+  <tr>
+    <td><img src="https://raw.githubusercontent.com/svllvsxprod/ebloid_client/main/docs/readme/screenshots/ios-videos.png" alt="Раздел видео Eblo.id на iOS" width="210" /></td>
+    <td><img src="https://raw.githubusercontent.com/svllvsxprod/ebloid_client/main/docs/readme/screenshots/ios-search.png" alt="Поиск Eblo.id на iOS" width="210" /></td>
+    <td><img src="https://raw.githubusercontent.com/svllvsxprod/ebloid_client/main/docs/readme/screenshots/ios-notifications.png" alt="Уведомления Eblo.id на iOS" width="210" /></td>
+    <td><img src="https://raw.githubusercontent.com/svllvsxprod/ebloid_client/main/docs/readme/screenshots/ios-settings.png" alt="Настройки Eblo.id на iOS" width="210" /></td>
+  </tr>
+</table>
+
+<table>
+  <tr>
+    <th>Поддержка</th>
+    <th>Правила</th>
+    <th>Конфиденциальность</th>
+  </tr>
+  <tr>
+    <td><img src="https://raw.githubusercontent.com/svllvsxprod/ebloid_client/main/docs/readme/screenshots/ios-support.png" alt="Поддержка Eblo.id на iOS" width="260" /></td>
+    <td><img src="https://raw.githubusercontent.com/svllvsxprod/ebloid_client/main/docs/readme/screenshots/ios-rules.png" alt="Правила Eblo.id на iOS" width="260" /></td>
+    <td><img src="https://raw.githubusercontent.com/svllvsxprod/ebloid_client/main/docs/readme/screenshots/ios-privacy.png" alt="Конфиденциальность Eblo.id на iOS" width="260" /></td>
+  </tr>
+</table>
+
+## Готово И Работает
+
+- ✅ Общая лента с сортировками, периодами, фильтрами по типу медиа, обновлением и пагинацией.
+- ✅ Изображения, видео, аудио, одиночные публикации и альбомы.
+- ✅ Экран публикации с исходным соотношением сторон и полноэкранным просмотром изображений.
+- ✅ Нативное воспроизведение видео и аудио.
+- ✅ Twitch-авторизация на Android и iOS через изолированный eblo.id WebView flow.
+- ✅ Безопасное сохранение и восстановление eblo.id session через Android Keystore и iOS Keychain.
+- ✅ Профиль активного пользователя, публичные профили и публикации автора.
+- ✅ Upvote/downvote публикаций с восстановлением выбранной реакции.
+- ✅ Реакции на комментарии и ответы с optimistic update и откатом при ошибке.
+- ✅ Комментарии и вложенные ответы.
+- ✅ Создание публикаций с изображениями, видео, аудио и несколькими файлами.
+- ✅ Публикации «В ленте» и «По ссылке».
+- ✅ Защищённый локальный черновик, прогресс загрузки, отмена и повтор.
+- ✅ Общий поиск по публикациям, видео и пользователям.
+- ✅ Нативный центр уведомлений: полный доступный список, unread badge, категории, прочтение одного/всех и очистка.
+- ✅ Переходы из уведомлений в публикацию, конкретный комментарий, профиль и проверенную внешнюю video-ссылку.
+- ✅ Настройки уведомлений о лайках/комментариях и локальный звук с rollback при ошибке.
+- ✅ Нативная поддержка: Telegram-канал, чат с администраторами, email и безопасный fallback с копированием адреса.
+- ✅ Справочные Rules/Privacy экраны с зафиксированной редакцией, verified public facts и ссылкой на eblo.id.
+- ✅ Копирование runtime version/build и явный email flow запроса удаления данных.
+- ✅ Системная отправка канонической ссылки на публикацию.
+- ✅ Единый адаптивный интерфейс, название и launcher icons для Android и iOS.
+- ✅ Android debug Beta APK и проверенная iOS Simulator сборка из одного Flutter-дерева.
+
+## Архитектура
+
+```text
+iOS / Android
+  -> Flutter UI
+  -> Riverpod controllers и dependency injection
+  -> Domain models и repository interfaces
+  -> Dio / platform adapters / secure storage
+  -> подтверждённые web compatibility endpoints eblo.id
+```
+
+Основные принципы:
+
+- `go_router` управляет общим route graph и deep links.
+- UI зависит от domain models и controllers, а не от transport DTO.
+- Remote, cache и platform logic скрыты за repository/adapters.
+- API origin задаётся через проверенную build configuration.
+- Неподтверждённые backend-возможности не подменяются фиктивными данными.
+- Один media-first дизайн и одна тема используются на обеих платформах.
+
+## Модель Безопасности
+
+- Клиент сохраняет только eblo.id cookie `session`; Twitch cookies и tokens не переносятся в приложение.
+- Session хранится через Keychain/Android Keystore-backed secure storage.
+- CSRF token обновляется перед authenticated mutations.
+- Session cookie передаётся только на точный HTTPS origin `eblo.id`.
+- Upload filenames нормализуются и не раскрывают исходные локальные пути.
+- Draft и локальные реакции разделяются по пользователю и очищаются по auth lifecycle.
+- Tokens, cookies, тексты комментариев, media paths и signed URLs не должны попадать в logs.
+- Cleartext traffic и отключение TLS validation не используются.
+
+## Публичный Исходный Код
+
+Из публичного source snapshot намеренно исключены компоненты, необходимые для сборки и подключения к backend. Локальный рабочий проект и готовые APK от этого не зависят:
+
+- Flutter dependency manifests и Android/iOS platform projects.
+- Entrypoint, composition root, router и navigation shell приложения.
+- API client и transport wiring.
+- Authenticated mutation guard.
+- Remote repositories для auth, content, notifications и upload.
+- Session interceptor для authenticated requests.
+- Controllers, protected-intent flow, cache/storage implementations и platform adapters.
+- Media/comment internals, unit/widget/integration tests и build harness.
+
+В репозитории остаются только публичная документация, screenshots, design-facing domain types, общие UI widgets и часть screen composition. Это showcase snapshot, а не распространяемый Flutter SDK или reproducible source release.
+
+Готовая тестовая Android-сборка публикуется только через GitHub Releases.
+
+## Документация
+
+- README содержит публичное описание, архитектуру и известные ограничения.
+- Внутренняя продуктовая, исследовательская и development-документация не публикуется в репозитории.
+
+## Текущие Ограничения
+
+- Turnstile/CAPTCHA challenge пока возвращается как controlled terminal blocker без встроенного challenge UI.
+- Background/resumable upload и server-side cleanup требуют дополнительного backend/platform решения.
+- Public-safe cache первой страницы feed, доступных post/comments и публичных profile uploads готов.
+- Read cache хранится в disposable, не попадающем в backup temporary storage до 24 часов. В него не записываются authenticated responses, реакции/права пользователя, avatar/media URL, restricted/non-available posts или partial comments.
+- В Beta 1 авторизованный read-path не обновляет public cache: offline fallback использует только ранее сохранённый guest/public-scope результат, пока visibility contract не позволит безопасную нормализацию.
+- Жалобы, block/mute и account deletion отложены до появления согласованных backend contracts; локальные имитации в Beta 1 не используются.
+- OAuth login подтверждён на Android/iOS simulator и физическом Android-устройстве; physical iOS и финальный deep-link smoke ещё требуются.
+- In-app notification center, unread и настройки работают; системная push-доставка требует отдельного device-token transport.
+- Неподдерживаемый системным декодером media-файл можно открыть через проверенную каноническую ссылку в браузере; финальный playback smoke требуется на физических iOS/Android устройствах.
+
+## Статус Разработки
+
+Актуальная тестовая Android-сборка доступна в Beta 1 release. Известные пользовательские ограничения перечислены выше.
+
